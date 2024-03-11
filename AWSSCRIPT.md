@@ -178,9 +178,7 @@ local function ToggleAction(index)
                                     local args = {
                                         [1] = true
                                     }
-                                
-                                    game:GetService("ReplicatedStorage").Packages.Knit.Services.ToolService.RF.SetFishRod:InvokeServer(unpack(args))
-                                
+                      
                                     game:GetService("ReplicatedStorage").Packages.Knit.Services.NetService.RF.StartCatching:InvokeServer()
                                 
                                     local args2 = {
