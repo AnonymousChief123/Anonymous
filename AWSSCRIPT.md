@@ -196,7 +196,7 @@ local function ToggleAction(index)
                             end
                         end)
                     end
-                    wait(2) -- Adjust the delay as needed
+                    wait(1) -- Adjust the delay as needed
                 end
             end)
             coroutine.resume(actionCoroutine)
