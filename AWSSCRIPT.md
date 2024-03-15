@@ -191,12 +191,12 @@ local function ToggleAction(index)
                                 
                                 while isToggled do
                                     fishLoop()
-                                    wait(1)  -- Wait for 1 second before looping again
+                                    wait(9999999)  -- Wait for 1 second before looping again
                                 end
                             end
                         end)
                     end
-                    wait(0.1) -- Adjust the delay as needed
+                    wait(2) -- Adjust the delay as needed
                 end
             end)
             coroutine.resume(actionCoroutine)
