@@ -122,7 +122,7 @@ local function ToggleAction(index)
                                     
                                     game:GetService("ReplicatedStorage").Packages.Knit.Services.ItemCraftingService.RF.UpgradeSnack:InvokeServer(unpack(args_tier2))
                                     
-                                    wait(.1) -- Wait for 1 second before next iteration
+                                    wait(0.1) -- Wait for 1 second before next iteration
                                 end
                             end
                         end)
@@ -135,7 +135,7 @@ local function ToggleAction(index)
                                     [2] = 2
                                 }
                                 game:GetService("ReplicatedStorage").Packages.Knit.Services.MerchantService.RF.BuyItem:InvokeServer(unpack(args))
-                                wait(.1)
+                                wait(0.1)
                             end
                         end)
                     elseif index == 4 then
