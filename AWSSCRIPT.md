@@ -176,29 +176,18 @@ local function ToggleAction(index)
                             while isToggled do
                                 local function fishLoop()
                                     local args = {
-                                        [1] = true
-                                    }
-                      
-                                    game:GetService("ReplicatedStorage").Packages.Knit.Services.NetService.RF.StartCatching:InvokeServer()
-                                
-                                    local args2 = {
-                                        [1] = 1,
-                                        [2] = 1
-                                    }
-                                
-                                    game:GetService("ReplicatedStorage").Packages.Knit.Services.NetService.RF.VerifyCatch:InvokeServer(unpack(args2))
-                                end
-                                
-                                while isToggled do
-                                    fishLoop()
-                                    wait(9999999)  -- Wait for 1 second before looping again
-                                end
+       [1] = "Regular"
+                                }
+                                game:GetService("ReplicatedStorage").Packages.Knit.Services.NetService.RF.StartCatching:InvokeServer(unpack(args))
+                                wait(2) -- Adjust the delay as needed
+                                local args2 = {
+                                    [1] = 1,
+                                    [2] = 1
+                                }
+                                game:GetService("ReplicatedStorage").Packages.Knit.Services.NetService.RF.VerifyCatch:InvokeServer(unpack(args2))
+                                wait(1) -- Adjust the delay as needed
                             end
                         end)
-                    end
-                    wait(1) -- Adjust the delay as needed
-                end
-            end)
             coroutine.resume(actionCoroutine)
         else
             actionButtons[index].Text = actionButtonText[index]:gsub(": On", ": Off")
