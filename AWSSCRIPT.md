@@ -154,7 +154,7 @@ local function ToggleAction(index)
                                     
                                     game:GetService("ReplicatedStorage").Packages.Knit.Services.ItemCraftingService.RF.UpgradeSnack:InvokeServer(unpack(args_tier2))
                                     
-                                    wait(1) -- Wait for 1 second before next iteration
+                                    wait(0.1) -- Wait for 1 second before next iteration
                                 end
                             end
                         end)
